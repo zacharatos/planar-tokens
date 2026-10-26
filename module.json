@@ -1,0 +1,33 @@
+{
+  "id": "planar-tokens",
+  "title": "Planar Tokens",
+  "description": "Make a token from an actor's portrait in seconds: a button on character and NPC sheets opens an editor where you drag and zoom the portrait to choose what shows, pick a shape, a fantasy frame and a background, and save it as the actor's token (or use Foundry's dynamic ring).",
+  "version": "0.1.0",
+  "authors": [
+    { "name": "rkeytech" }
+  ],
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14"
+  },
+  "relationships": {
+    "systems": [
+      { "id": "dnd5e", "type": "system", "compatibility": { "minimum": "6.0.0" } }
+    ]
+  },
+  "esmodules": ["scripts/main.mjs"],
+  "socket": true,
+  "styles": ["styles/planar-tokens.css"],
+  "languages": [
+    { "lang": "en", "name": "English", "path": "lang/en.json" },
+    { "lang": "el", "name": "Ελληνικά", "path": "lang/el.json" }
+  ],
+  "url": "https://github.com/zacharatos/planar-tokens",
+  "manifest": "https://github.com/zacharatos/planar-tokens/releases/latest/download/module.json",
+  "download": "https://github.com/zacharatos/planar-tokens/releases/download/v0.1.0/module.zip",
+  "bugs": "https://github.com/zacharatos/planar-tokens/issues",
+  "readme": "https://github.com/zacharatos/planar-tokens#readme",
+  "changelog": "https://github.com/zacharatos/planar-tokens/blob/main/CHANGELOG.md",
+  "license": "https://github.com/zacharatos/planar-tokens/blob/main/LICENSE",
+  "flags": {}
+}

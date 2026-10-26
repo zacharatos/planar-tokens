@@ -1,0 +1,91 @@
+/* Planar Tokens. Scoped to .planar-tokens (the editor) and .ptk-portrait-* (the sheet button). */
+
+.planar-tokens {
+  --ptk-gold: #c9a14e;
+  --ptk-accent: #8e6cd8;
+  --ptk-warn: #d9a441;
+  --ptk-error: #d9534f;
+  --ptk-muted: color-mix(in srgb, currentColor 62%, transparent);
+  --ptk-line: color-mix(in srgb, currentColor 18%, transparent);
+  --ptk-fill: color-mix(in srgb, currentColor 6%, transparent);
+}
+
+.planar-tokens .window-content { padding: 0; display: flex; flex-direction: column; }
+.planar-tokens.ptk-busy .window-content { cursor: progress; }
+
+.planar-tokens .ptk-editor { display: grid; grid-template-columns: 460px 1fr; gap: 14px; padding: 12px 14px 6px; }
+.planar-tokens .ptk-left, .planar-tokens .ptk-right { min-width: 0; }
+
+/* stage */
+.planar-tokens .ptk-stage-wrap { position: relative; width: 440px; height: 440px; margin: 0 auto; border-radius: 10px; overflow: hidden;
+  box-shadow: 0 0 0 1px var(--ptk-line), 0 6px 20px rgba(0,0,0,.35); }
+.planar-tokens .ptk-stage { display: block; cursor: grab; touch-action: none; outline: none; }
+.planar-tokens .ptk-stage:focus-visible { box-shadow: inset 0 0 0 2px var(--ptk-gold); }
+.planar-tokens .ptk-stage.ptk-grabbing { cursor: grabbing; }
+.planar-tokens .ptk-dropzone { position: absolute; inset: 0; display: none; align-items: center; justify-content: center; gap: 8px;
+  font-size: 1.2em; color: #fff; background: rgba(40, 24, 70, .72); border: 2px dashed var(--ptk-gold); border-radius: 10px; pointer-events: none; }
+.planar-tokens .ptk-stage-wrap.ptk-dragging .ptk-dropzone { display: flex; }
+.planar-tokens .ptk-banner { position: absolute; left: 8px; right: 8px; bottom: 8px; padding: 6px 10px; border-radius: 6px; font-size: .9em; color: #fff; line-height: 1.3; }
+.planar-tokens .ptk-banner.ptk-warn { background: rgba(120, 80, 10, .92); }
+.planar-tokens .ptk-banner.ptk-error { background: rgba(130, 30, 30, .92); }
+
+.planar-tokens .ptk-hint { margin: 6px 0 2px; color: var(--ptk-muted); font-size: .85em; text-align: center; }
+.planar-tokens .ptk-row { display: flex; align-items: center; gap: 8px; margin: 6px 0; }
+.planar-tokens .ptk-row input[type="range"] { flex: 1 1 auto; min-width: 0; }
+.planar-tokens .ptk-row > i { color: var(--ptk-muted); width: 16px; text-align: center; }
+.planar-tokens .ptk-buttons { flex-wrap: wrap; gap: 4px; }
+.planar-tokens .ptk-buttons button { flex: 0 0 auto; width: auto; padding: 0 8px; line-height: 26px; height: 28px; font-size: .9em; }
+.planar-tokens .ptk-label { color: var(--ptk-muted); font-size: .9em; margin-right: 2px; }
+
+/* options */
+.planar-tokens .ptk-sub { margin: 12px 0 6px; padding-bottom: 2px; border-bottom: 1px solid var(--ptk-line); font-size: .95em; font-weight: 600; }
+.planar-tokens .ptk-seg { display: flex; border: 1px solid var(--ptk-line); border-radius: 8px; overflow: hidden; }
+.planar-tokens .ptk-seg button { flex: 1 1 0; border: 0; border-radius: 0; background: transparent; height: 32px; margin: 0; }
+.planar-tokens .ptk-seg button.on { background: color-mix(in srgb, var(--ptk-accent) 30%, transparent); box-shadow: inset 0 -2px 0 var(--ptk-accent); }
+
+.planar-tokens .ptk-shapes { display: flex; gap: 4px; }
+.planar-tokens .ptk-shapes button { flex: 0 0 38px; width: 38px; height: 34px; padding: 0; font-size: 1.15em; }
+.planar-tokens .ptk-shape.on, .planar-tokens .ptk-frame.on { border-color: var(--ptk-gold); box-shadow: 0 0 0 1px var(--ptk-gold) inset, 0 0 8px color-mix(in srgb, var(--ptk-gold) 45%, transparent); }
+
+.planar-tokens .ptk-frames { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; }
+.planar-tokens .ptk-frame { display: flex; flex-direction: column; align-items: center; gap: 2px; height: auto; padding: 4px 2px 3px; margin: 0; line-height: 1.1; }
+.planar-tokens .ptk-frame canvas { width: 54px; height: 54px; }
+.planar-tokens .ptk-frame span { font-size: .78em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+
+.planar-tokens .ptk-field { display: flex; align-items: center; gap: 8px; margin: 8px 0; }
+.planar-tokens .ptk-field > span { flex: 0 0 96px; color: var(--ptk-muted); font-size: .92em; }
+.planar-tokens .ptk-field select { flex: 1 1 auto; }
+.planar-tokens .ptk-field input[type="range"] { flex: 1 1 auto; }
+.planar-tokens .ptk-field input[type="color"] { flex: 0 0 42px; width: 42px; height: 26px; padding: 1px; border-radius: 4px; }
+.planar-tokens .ptk-field input[type="color"]:disabled { opacity: .5; }
+.planar-tokens .ptk-check { display: flex; align-items: center; gap: 6px; margin: 4px 0; font-size: .92em; }
+.planar-tokens .ptk-field .ptk-check { margin: 0; }
+.planar-tokens .ptk-disabled { opacity: .5; }
+
+.planar-tokens .ptk-previews { display: flex; align-items: flex-end; gap: 10px; }
+.planar-tokens .ptk-prev[data-px="100"] { width: 140px; height: 140px; }
+.planar-tokens .ptk-prev[data-px="50"] { width: 80px; height: 80px; }
+.planar-tokens .ptk-prev { border-radius: 6px; box-shadow: 0 0 0 1px var(--ptk-line); }
+
+/* things that only apply to one mode or one choice */
+.planar-tokens .ptk-editor[data-mode="ring"] .ptk-framed { display: none; }
+.planar-tokens .ptk-editor[data-frame="none"] .ptk-thick { display: none; }
+.planar-tokens .ptk-editor:not(.ptk-accent-used) .ptk-accent { opacity: .45; }
+.planar-tokens .ptk-editor[data-bg="none"] .ptk-bgcolor,
+.planar-tokens .ptk-editor[data-bg="parchment"] .ptk-bgcolor { visibility: hidden; }
+
+.planar-tokens .ptk-footer { display: flex; align-items: center; gap: 6px; padding: 8px 14px 12px; border-top: 1px solid var(--ptk-line); }
+.planar-tokens .ptk-footer button { flex: 0 0 auto; width: auto; padding: 0 14px; }
+.planar-tokens .ptk-spacer { flex: 1 1 auto; }
+.planar-tokens .ptk-primary { border-color: var(--ptk-gold); box-shadow: 0 0 0 1px var(--ptk-gold) inset; font-weight: 600; }
+
+/* the button on the sheet's portrait */
+.ptk-portrait-holder { position: relative; }
+.ptk-portrait-btn {
+  position: absolute; right: 6px; bottom: 6px; z-index: 5;
+  width: 30px; height: 30px; min-width: 0; padding: 0; margin: 0; line-height: 28px;
+  border-radius: 50%; border: 1px solid #c9a14e; background: rgba(20, 14, 28, .82); color: #f0dfb4;
+  font-size: 15px; cursor: pointer; opacity: 0; transition: opacity .15s, transform .15s;
+}
+.ptk-portrait-holder:hover .ptk-portrait-btn, .ptk-portrait-btn:focus-visible { opacity: 1; }
+.ptk-portrait-btn:hover { transform: scale(1.08); background: rgba(48, 30, 80, .92); }

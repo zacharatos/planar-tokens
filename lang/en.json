@@ -1,0 +1,137 @@
+{
+  "PLANAR_TOKENS": {
+    "Editor": {
+      "Title": "Token Maker",
+      "TitleFor": "Token Maker: {name}",
+      "StageLabel": "Portrait: drag to move, scroll to zoom, arrow keys to nudge",
+      "DropHere": "Drop an image here",
+      "HowTo": "Drag to move · scroll to zoom (Shift: finer) · double-click to reset",
+      "Zoom": "Zoom",
+      "Rotate": "Rotate",
+      "Flip": "Mirror",
+      "Fit": "Whole image",
+      "FitHint": "Show the whole portrait inside the token",
+      "Reset": "Reset",
+      "ResetHint": "Back to the starting crop (face near the top)",
+      "Source": "Image:",
+      "FromPortrait": "Portrait",
+      "FromServer": "From the server…",
+      "FromComputer": "From your computer…",
+      "Shape": "Shape",
+      "Frame": "Frame",
+      "Thickness": "Frame width",
+      "Accent": "Colour",
+      "AccentAuto": "By disposition",
+      "AccentAutoHint": "Green for friendly, yellow for neutral, red for hostile, purple for secret",
+      "Background": "Background",
+      "Shadow": "Soft shadow inside the frame",
+      "Size": "Image size",
+      "ApplyTo": "Use it for",
+      "Prototype": "The actor's token (new tokens)",
+      "SceneTokens": "Its tokens on this scene ({n})",
+      "OnTheMap": "On the map",
+      "Download": "Download",
+      "Cancel": "Cancel",
+      "Create": "Create token",
+      "Tainted": "This image is on another website, so the browser won't let it be saved. Choose a copy from the server or from your computer.",
+      "LoadFailed": "The image could not be loaded. Choose another one."
+    },
+    "Mode": {
+      "framed": {
+        "Name": "Framed",
+        "Hint": "Our frame is drawn into the image; Foundry's ring is switched off"
+      },
+      "ring": {
+        "Name": "Foundry ring",
+        "Hint": "A round cut of the portrait with Foundry's dynamic token ring around it"
+      }
+    },
+    "Shape": {
+      "circle": "Circle",
+      "square": "Square",
+      "hexagon": "Hexagon",
+      "octagon": "Octagon",
+      "shield": "Shield"
+    },
+    "Frame": {
+      "none": {
+        "Name": "None",
+        "Hint": "Just the shape, no frame"
+      },
+      "ring": {
+        "Name": "Ring",
+        "Hint": "A plain ring in the colour you pick"
+      },
+      "gilded": {
+        "Name": "Gilded",
+        "Hint": "Gold with four gems in the colour you pick"
+      },
+      "silver": {
+        "Name": "Silver",
+        "Hint": "Polished silver with a coloured inner line"
+      },
+      "bronze": {
+        "Name": "Bronze",
+        "Hint": "Bronze with rivets"
+      },
+      "iron": {
+        "Name": "Iron",
+        "Hint": "Pitted, rusty iron with rivets"
+      },
+      "bone": {
+        "Name": "Bone",
+        "Hint": "Old ivory with carved notches"
+      },
+      "arcane": {
+        "Name": "Arcane",
+        "Hint": "A dark band of glowing runes"
+      },
+      "blades": {
+        "Name": "Blades",
+        "Hint": "Iron with a crown of blades pointing inward"
+      },
+      "glitch": {
+        "Name": "Glitch",
+        "Hint": "A broken, flickering ring of colour"
+      }
+    },
+    "Background": {
+      "none": "Transparent",
+      "solid": "Solid colour",
+      "vignette": "Vignette",
+      "parchment": "Parchment",
+      "astral": "Astral sky"
+    },
+    "Sheet": {
+      "Control": "Make a token",
+      "Button": "Make a token from this portrait"
+    },
+    "Notify": {
+      "NoGM": "A GM must be online to save the token (players can't upload files).",
+      "TooBig": "The image is too large to send. Pick a smaller image size.",
+      "Timeout": "The GM's client did not answer in time.",
+      "UploadFailed": "The image could not be saved.",
+      "PlayersOff": "Players may not make tokens in this world.",
+      "Done": "New token for {name} ({tokens} on this scene updated): {path}",
+      "Failed": "Could not make the token: {error}"
+    },
+    "Settings": {
+      "players": {
+        "Name": "Players can make tokens",
+        "Hint": "Owners of a character can use the Token Maker on its sheet. Players without upload permission send the image to the GM's client, which saves it."
+      },
+      "folder": {
+        "Name": "Folder for new tokens",
+        "Hint": "Where images are saved in your user data. Empty: worlds/<this world>/planar-tokens"
+      },
+      "sheetButton": {
+        "Name": "Button on the portrait",
+        "Hint": "Show a small button over the portrait on character and NPC sheets (the entry in the sheet's menu is always there)."
+      },
+      "defaultSize": {
+        "Name": "Default image size",
+        "Hint": "Size of new token images in pixels, until a user picks another."
+      }
+    }
+  }
+}
