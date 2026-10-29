@@ -10,6 +10,7 @@ test("only small WebP / PNG data URLs are relayed to the GM", () => {
   assert.equal(validRelay("data:text/html;base64,AAAA"), false);
   assert.equal(validRelay("https://example.com/x.webp"), false);
   assert.equal(validRelay("data:image/webp;base64,<script>"), false);
-  assert.equal(validRelay("data:image/webp;base64," + "A".repeat(7 * 1024 * 1024)), false);
+  assert.equal(validRelay("data:image/webp;base64," + "A".repeat(4 * 1024 * 1024)), false, "over the relay limit");
+  assert.equal(validRelay("data:image/webp;base64," + "A".repeat(2 * 1024 * 1024)), true, "a large token still fits");
   assert.equal(validRelay(null), false);
 });

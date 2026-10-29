@@ -67,3 +67,4 @@ Player (second browser, a player who owns a character, Player role without uploa
 - *Players can make tokens* off: no button or menu entry for players.
 - A player sees no button on sheets they only observe.
 - Trusted Player (with upload permission): saves directly, works without the GM.
+- As a player **without** "Upload new files" permission, make a 1024 px token: it saves through the GM (the GM's client must be connected) and appears on the actor. Other players' consoles show no errors.

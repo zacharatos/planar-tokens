@@ -3,6 +3,12 @@
 All notable changes to this module. Format follows [Keep a Changelog](https://keepachangelog.com/); versions follow [SemVer](https://semver.org/).
 The release workflow uses the section matching the tag as the GitHub release notes, so keep the `## [x.y.z]` headings exact.
 
+## [0.1.1]
+
+### Changed
+- **Smaller player uploads over the socket.** Players without upload permission send the finished token to the GM over the module socket, which every connected client receives. The limit goes from 6 MB to 3 MB: a 1024 px token (WebP, or the PNG fallback) still fits, but nothing large can reach every browser at the table.
+- CI and release workflows use `actions/checkout@v5` and `actions/setup-node@v5`; CI runs with read-only repository permissions.
+
 ## [0.1.0]
 
 ### Added
