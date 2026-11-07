@@ -52,5 +52,5 @@ Don't write a commit message unless he asks for one. If he does, offer it as a s
 - Actor data: `flags.planar-tokens.recipe` (schema in `util.mjs`, `RECIPE_SCHEMA`). If you change its shape, bump the schema and handle old recipes in `normalizeRecipe`.
 - The module never deletes, moves or renames files on the server (a test checks it). New images get new names.
 - Only the active GM's client saves images for players; validate anything that arrives over the socket (`validRelay`).
-- Version numbers in `module.json`, `package.json` and `CHANGELOG.md`: only change them when asked.
+- **Versions:** change them only when asked (or when the task is a release). A version change updates every reference in the same change: `module.json` (`version` and the `download` URL's `vX.Y.Z`), `package.json` and `package-lock.json` (`version`), a `## [X.Y.Z]` section at the top of `CHANGELOG.md`, and any version a README or doc names. Follow semver: a new feature bumps the minor, a fix the patch.
 - Never add campaign content, publisher text, art or audio to the repo. Frames are drawn in code.
